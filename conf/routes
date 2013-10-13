@@ -1,0 +1,14 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index
+
+# Liste des galleries
+GET     /galleries                  controllers.Application.galleries
+GET     /gallery/:id                controllers.Application.gallery(id: Long)
+GET     /pictures                   controllers.Application.pictures
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)

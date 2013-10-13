@@ -1,0 +1,23 @@
+@(picPath: String)
+@picPathComplete = @{routes.Assets.at("images/" + picPath)}
+
+<div class="thumbnail">
+    <table style="width:100%; text-align:center">
+        <tbody>
+        <tr>
+            <td><a href="#"><img src='@picPathComplete' onclick="showCarousel(); return false"></a></td>
+        </tr>
+        <tr>
+            <td style="text-align:center">
+                <div class="btn-group btn-group-sm">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox">
+                        </label>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

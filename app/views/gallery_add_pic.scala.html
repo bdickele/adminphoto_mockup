@@ -1,0 +1,64 @@
+
+<div class="modal fade" id="modalPicStock" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width:660px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <form class="form" role="form">
+                    <div class="form-group">
+                        <label>Folder : </label>
+                        <select name="pays" id="pays" class="input-sm">
+                            <option value="2013" selected>2013</option>
+                            <option value="2012">2012</option>
+                            <option value="2011">2011</option>
+                            <option value="2010">2010</option>
+                        </select>
+
+                        <label>&nbsp;&nbsp; Sub-folder : </label>
+                        <select name="pays" id="subCategory" class="input-sm">
+                            <option value="*"></option>
+                            <option value="1306_4" selected>1306_4</option>
+                            <option value="1306_3">1306_3</option>
+                            <option value="1306_2">1306_2</option>
+                            <option value="1306_1">1306_1</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-12 col-md-4">
+                        @pictures_pic_stock("thumbnail/201305_bdi_misc_175.jpg")
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        @pictures_pic_stock("thumbnail/201306_bdi_misc_035.jpg")
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        @pictures_pic_stock("thumbnail/201306_bdi_misc_094.jpg")
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-4">
+                        @pictures_pic_stock("thumbnail/201306_bdi_misc_109.jpg")
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        @pictures_pic_stock("thumbnail/201306_caro_misc_004.jpg")
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        @pictures_pic_stock("thumbnail/201306_bdi_misc_109.jpg")
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#">
+                    <button type="button" class="btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-floppy-disk"></span> Add
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src='@routes.Assets.at("javascripts/picture_carousel.js")' type="text/javascript"></script>

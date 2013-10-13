@@ -1,0 +1,77 @@
+@mainframe("Pictures")() {
+
+<br><br>
+
+<ul class="nav nav-tabs">
+    <li><a href="/galleries">Galleries</a></li>
+    <li class="active"><a href="#">Photos</a></li>
+</ul>
+
+<br>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">What to display ?</div>
+    <div class="panel-body">
+        <form class="form" role="form">
+            <div class="form-group">
+                <label>Folder : </label>
+                <select name="pays" id="pays" class="input-sm">
+                    <option value="2013" selected>2013</option>
+                    <option value="2012">2012</option>
+                    <option value="2011">2011</option>
+                    <option value="2010">2010</option>
+                </select>
+
+                <label>&nbsp;&nbsp; Sub-folder : </label>
+                <select name="pays" id="subCategory" class="input-sm">
+                    <option value="*"></option>
+                    <option value="1306_4" selected>1306_4</option>
+                    <option value="1306_3">1306_3</option>
+                    <option value="1306_2">1306_2</option>
+                    <option value="1306_1">1306_1</option>
+                </select>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> Without print version
+                </label>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="panel panel-info">
+    <div class="panel-heading">Result</div>
+    <div class="panel-body">
+        <div class="btn-group">
+            <button type="button" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-refresh"></span> Rescan
+            </button>
+        </div>
+        <br><br>
+
+        <div class="row">
+            <div class="col-xs-6 col-md-3">
+                @pictures_pic("thumbnail/201305_bdi_misc_175.jpg")
+            </div>
+            <div class="col-xs-6 col-md-3">
+                @pictures_pic("thumbnail/201306_bdi_misc_035.jpg")
+            </div>
+            <div class="col-xs-6 col-md-3">
+                @pictures_pic("thumbnail/201306_bdi_misc_094.jpg")
+            </div>
+            <div class="col-xs-6 col-md-3">
+                @pictures_pic("thumbnail/201306_bdi_misc_109.jpg")
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-md-3">
+                @pictures_pic("thumbnail/201306_caro_misc_004.jpg")
+            </div>
+            <div class="col-xs-6 col-md-3">
+                @pictures_pic("thumbnail/201306_bdi_misc_109.jpg")
+            </div>
+        </div>
+    </div>
+</div>
+}

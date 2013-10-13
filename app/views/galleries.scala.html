@@ -1,0 +1,69 @@
+@mainframe("Gallery list")() {
+
+<br><br>
+
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#">Galleries</a></li>
+    <li><a href="/pictures">Photos</a></li>
+</ul>
+
+<br>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">What to display ?</div>
+    <div class="panel-body">
+        <form role="form">
+            <div class="form-group">
+                <div class="radio">
+                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="all"/>
+                    Les galleries non associées à une catégorie
+                </div>
+                <div class="radio">
+                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="category" checked/>
+                    Les galleries de la cat&eacute;gorie
+                    <select name="pays" id="pays" class="input-sm">
+                        <option value="2013" selected>2013</option>
+                        <option value="2012">2012</option>
+                        <option value="2011">2011</option>
+                        <option value="2010">2010</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="panel panel-info">
+    <div class="panel-heading">Result</div>
+    <div class="panel-body">
+        <div class="btn-group">
+            <button type="button" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-plus"></span> Add
+            </button>
+            <button type="button" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-refresh"></span> Refresh
+            </button>
+        </div>
+        <br><br>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th style="text-align:center; width:130px">&nbsp;</th>
+                <th style="text-align:center;">Titre</th>
+                <th style="text-align:center; width:30">Photos</th>
+                <th style="text-align:center; width:30">Online</th>
+                <th style="text-align:center;">Up</th>
+                <th style="text-align:center;">Down</th>
+            </tr>
+            </thead>
+            <tbody>
+            @galleryrow(1, "thumbnail/201305_bdi_misc_175.jpg", "Juin 2013", "bla blabla bla", 25, true)
+            @galleryrow(1, "thumbnail/201306_bdi_misc_035.jpg", "Juin 2013", "bla blabla bla", 24, true)
+            @galleryrow(1, "thumbnail/201306_bdi_misc_094.jpg", "Juin 2013", "bla blabla bla", 19, false)
+            @galleryrow(1, "thumbnail/201306_bdi_misc_109.jpg", "Juin 2013", "bla blabla bla", 21, true)
+            @galleryrow(1, "thumbnail/201306_caro_misc_004.jpg", "Juin 2013", "bla blabla bla", 21, true)
+            </tbody>
+        </table>
+    </div>
+</div>
+}

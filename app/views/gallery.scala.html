@@ -1,0 +1,98 @@
+@mainframe("Gallery")() {
+
+<br>
+
+<div class="panel panel-info">
+    <div class="panel-heading">Gallery</div>
+    <div class="panel-body">
+        <div class="btn-group">
+            <button type="button" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-floppy-disk"></span> Save
+            </button>
+            <button type="button" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-step-backward"></span> Cancel
+            </button>
+            <a href="/galleries">
+                <button type="button" class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-home"></span> Back to list
+                </button>
+            </a>
+        </div>
+
+        <br><br>
+
+        <form class="form" role="form">
+            <label>Catégorie </label>
+            <div class="form-group">
+                <select name="pays" id="category" class="input-sm">
+                    <option value="no"></option>
+                    <option value="2013" selected>2013</option>
+                    <option value="2012">2012</option>
+                    <option value="2011">2011</option>
+                    <option value="2010">2010</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="title">Title </label>
+                <input type="text" class="form-control" id="title" placeholder="Gallery's title"
+                       value="Juin 2013">
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea class="form-control" id="description"
+                          style="resize: none;" placeholder="Gallery's description">fjdhgfksd fdskjfh
+                    sdkjfhds fkjsdh fkjsfh sdkj hsdfk sdhjfksd fhjksdfh jsd</textarea>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="panel panel-info">
+    <div class="panel-heading">Pictures</div>
+    <div class="panel-body">
+        <div class="btn-group">
+            <button type="button" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-floppy-disk"></span> Save
+            </button>
+            <button type="button" class="btn btn-default btn-sm" onclick="$('#modalPicStock').modal('show'); return false">
+                <span class="glyphicon glyphicon-plus"></span> Add
+            </button>
+        </div>
+        <br><br>
+
+        <div class="row">
+            <div class="col-xs-6 col-md-3">
+                @gallery_pic("thumbnail/201305_bdi_misc_175.jpg")
+            </div>
+            <div class="col-xs-6 col-md-3">
+                @gallery_pic("thumbnail/201306_bdi_misc_035.jpg")
+            </div>
+            <div class="col-xs-6 col-md-3">
+                @gallery_pic("thumbnail/201306_bdi_misc_094.jpg")
+            </div>
+            <div class="col-xs-6 col-md-3">
+                @gallery_pic("thumbnail/201306_bdi_misc_109.jpg")
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-md-3">
+                @gallery_pic("thumbnail/201306_caro_misc_004.jpg")
+            </div>
+            <div class="col-xs-6 col-md-3">
+                @gallery_pic("thumbnail/201306_bdi_misc_109.jpg")
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+@gallery_carousel(Array("web/201305_bdi_misc_175.jpg",
+"web/201306_bdi_misc_035.jpg",
+"web/201306_bdi_misc_094.jpg",
+"web/201306_bdi_misc_109.jpg",
+"web/201305_bdi_misc_177.jpg"))
+
+@gallery_add_pic()
+
+}

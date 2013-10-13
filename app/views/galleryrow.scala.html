@@ -1,0 +1,21 @@
+@(id: Int, picPath: String, title: String, description: String, nbPic: Int, onLine: Boolean)
+
+@galleryLink = @{"gallery/" + id}
+@picPathComplete = @{routes.Assets.at("images/" + picPath)}
+
+<tr>
+    <td><a href="@galleryLink"><img src='@picPathComplete'></a></td>
+    <td>@title</td>
+    <td style="text-align:center;">@nbPic</td>
+    <td style="text-align:center;"><label><input type="checkbox" checked></label></td>
+    <td style="text-align:center;">
+        <button type="button" class="btn btn-default btn-sm">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </button>
+    </td>
+    <td style="text-align:center;">
+        <button type="button" class="btn btn-default btn-sm">
+            <span class="glyphicon glyphicon-chevron-down"></span>
+        </button>
+    </td>
+</tr>
