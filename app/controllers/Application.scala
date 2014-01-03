@@ -20,4 +20,8 @@ object Application extends Controller {
     Ok(views.html.pictures())
   }
 
+  def categories = Action {
+    Ok(views.html.categories())
+  }
+
 }

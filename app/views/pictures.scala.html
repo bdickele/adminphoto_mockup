@@ -2,46 +2,32 @@
 
 <br><br>
 
-<ul class="nav nav-tabs">
-    <li><a href="/galleries">Galleries</a></li>
-    <li class="active"><a href="#">Photos</a></li>
+<ul class="nav nav-pills nav-justified">
+    <li><a href="@controllers.routes.Application.galleries()">Galleries</a></li>
+    <li class="active"><a href="@controllers.routes.Application.pictures()">Photos</a></li>
+    <li><a href="@controllers.routes.Application.categories()">Categories</a></li>
 </ul>
 
 <br>
 
-<div class="panel panel-primary">
-    <div class="panel-heading">What to display ?</div>
-    <div class="panel-body">
-        <form class="form" role="form">
-            <div class="form-group">
-                <label>Folder : </label>
-                <select name="pays" id="pays" class="input-sm">
-                    <option value="2013" selected>2013</option>
-                    <option value="2012">2012</option>
-                    <option value="2011">2011</option>
-                    <option value="2010">2010</option>
-                </select>
-
-                <label>&nbsp;&nbsp; Sub-folder : </label>
-                <select name="pays" id="subCategory" class="input-sm">
-                    <option value="*"></option>
-                    <option value="1306_4" selected>1306_4</option>
-                    <option value="1306_3">1306_3</option>
-                    <option value="1306_2">1306_2</option>
-                    <option value="1306_1">1306_1</option>
-                </select>
-            </div>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox"> Without print version
-                </label>
-            </div>
-        </form>
-    </div>
-</div>
-
 <div class="panel panel-info">
-    <div class="panel-heading">Result</div>
+    <div class="panel-heading">
+        Folder :
+        <select name="folder1" id="folder1" class="input-sm">
+            <option value="2013" selected>2013</option>
+            <option value="2012">2012</option>
+            <option value="2011">2011</option>
+            <option value="2010">2010</option>
+        </select>
+
+        &nbsp;&nbsp; Sub-folder :
+        <select name="folder2" id="folder2" class="input-sm">
+            <option value="*">All</option>
+            <option value="1306_4" selected>1306_4</option>
+            <option value="1306_3">1306_3</option>
+            <option value="1306_2">1306_2</option>
+            <option value="1306_1">1306_1</option>
+        </select></div>
     <div class="panel-body">
         <div class="btn-group">
             <button type="button" class="btn btn-default btn-sm">
