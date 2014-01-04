@@ -2,11 +2,7 @@
 
 <br><br>
 
-<ul class="nav nav-pills nav-justified">
-    <li><a href="@controllers.routes.Application.galleries()">Galleries</a></li>
-    <li class="active"><a href="@controllers.routes.Application.pictures()">Photos</a></li>
-    <li><a href="@controllers.routes.Application.categories()">Categories</a></li>
-</ul>
+@topmenu(1)
 
 <br>
 
@@ -27,11 +23,15 @@
             <option value="1306_3">1306_3</option>
             <option value="1306_2">1306_2</option>
             <option value="1306_1">1306_1</option>
-        </select></div>
+        </select>
+
+        &nbsp;&nbsp;<button type="button" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-refresh"></i> Rescan list of folders</button>
+    </div>
+
     <div class="panel-body">
         <div class="btn-group">
             <button type="button" class="btn btn-default btn-sm">
-                <span class="glyphicon glyphicon-refresh"></span> Rescan
+                <i class="glyphicon glyphicon-refresh"></i> Rescan
             </button>
         </div>
         <br><br>

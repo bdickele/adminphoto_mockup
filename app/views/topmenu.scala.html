@@ -1,0 +1,6 @@
+@(index: Integer)
+<ul class="nav nav-pills nav-justified">
+    <li @if(index==0){class="active"}><a href="@controllers.routes.Application.galleries()">Galleries</a></li>
+    <li @if(index==1){class="active"}><a href="@controllers.routes.Application.pictures()">Photos</a></li>
+    <li @if(index==2){class="active"}><a href="@controllers.routes.Application.categories()">Categories</a></li>
+</ul>
